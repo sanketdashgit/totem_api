@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Attributes\**" />
+    <Compile Remove="Enums\**" />
+    <EmbeddedResource Remove="Attributes\**" />
+    <EmbeddedResource Remove="Enums\**" />
+    <None Remove="Attributes\**" />
+    <None Remove="Enums\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="DataTransferModels\Admin\Questionary\CreateAnswerforQuestionaryModel.cs" />
+    <Compile Remove="DataTransferModels\Admin\Questionary\QuestionaryInnovationSPModel.cs" />
+    <Compile Remove="DataTransferModels\Admin\Questionary\UpdateAnswerforQuestionaryModel.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.5" />
+    <PackageReference Include="xunit.extensibility.core" Version="2.4.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Database\Totem.Database.csproj" />
+  </ItemGroup>
+
+</Project>
